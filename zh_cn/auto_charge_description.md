@@ -1,10 +1,12 @@
+# 自动充电原理及配置
+
 本文描述了自动充电功能的原理，以及如何正确配置自动充电功能
 
 **注：自动充电功能目前处于调试阶段**
 
 ## 自动充电桩
 
-<p align="center"><img src="image/dock_info.png" width="60%" /></p>
+<p align="center"><img src="../img/dock_info.png" width="60%" /></p>
 
 
 1. 电源指示：常亮（电源开启），常灭（电源关闭）
@@ -12,7 +14,7 @@
 
 ## 自动充电原理
 
-<p align="center"><img src="image/auto_dock.png" width="90%" /></p>
+<p align="center"><img src="../img/auto_dock.png" width="90%" /></p>
 
 
 1. 根据参数配置，先导航至`DockReady`目标点
@@ -108,7 +110,7 @@
 
 ## 使用自动充电
 
-1. 参考[快速启动指南-定位导航](快速启动指南#定位导航)，启动Caster的定位导航功能，并正确设置Caster在地图中的位置
+1. 参考[快速启动指南-定位导航](quick_start.md#定位导航)，启动Caster的定位导航功能，并正确设置Caster在地图中的位置
 
 2. 参考[快速启动指南-手柄控制](快速启动指南#手柄控制)，启动手柄控制功能
 
@@ -154,7 +156,5 @@
 
 - 在行为结束时，通过此topic返回行为执行结果
 
-## 其他信息
 
-关于节点的详细信息，请参考[caster_app](https://github.com/I-Quotient-Robotics/caster/tree/master/caster_app#caster-app)
 
