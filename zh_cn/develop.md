@@ -125,4 +125,5 @@ Caster使用[yocs_cmd_vel_mux](http://wiki.ros.org/yocs_cmd_vel_mux)对多路控
 
 `dock_action` (actionlib api)
 
-自动充电指令，具体使用方式，请参考[自动充电原理与配置](自动充电原理与配置)
+自动充电指令，具体使用方式，请参考[自动充电原理与配置](auto_charge_description.md)
+

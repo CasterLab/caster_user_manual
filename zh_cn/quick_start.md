@@ -2,7 +2,7 @@
 
 1. 一台装有ROS Kinetic的Ubuntu电脑一台，下文简称**外部PC**
 
-2. 将网线连接到底盘的交换机上，并参考[网络信息-外部设备设置](网络信息#外部设备设置)，设置外部PC的IP地址
+2. 将网线连接到底盘的交换机上，并参考[网络信息-外部设备设置](network_info.md#外部设备设置)，设置外部PC的IP地址
 
 3. 使用PING指令，测试和Caster-PC的网络通信情况
 
@@ -24,7 +24,7 @@
 
 ## ROS功能启动
 
-1. 使用SSH登录到Caster的PC中，IP地址参考[网络信息](网络信息)
+1. 使用SSH登录到Caster的PC中，IP地址参考[网络信息](network_info.md)
 
 2. 运行如下代码，启动底盘控制程序
 
@@ -46,9 +46,9 @@
 
 ## 手柄控制
 
-Caster可以使用手柄进行遥控，具体按键功能参考[手柄功能定义](手柄功能定义)
+Caster可以使用手柄进行遥控，具体按键功能参考[手柄功能定义](joystick_description.md)
 
-1. 参考[ROS功能启动](快速启动指南#ROS功能启动)，启动Caster的ROS功能
+1. 参考[ROS功能启动](quick_start.md#ROS功能启动)，启动Caster的ROS功能
 
 2. 将手柄连接至外部PC
 
@@ -58,13 +58,13 @@ Caster可以使用手柄进行遥控，具体按键功能参考[手柄功能定�
    roslaunch caster_teleop teleop.launch
    ```
 
-4. 根据[手柄功能定义](手柄功能定义)，操控Caster进行移动
+4. 根据[手柄功能定义](joystick_description.md)，操控Caster进行移动
 
 5. 对于移动操作，只有在按下`安全键`的时候，信号才会被Caster接收到。
 
 ## 创建地图
 
-1. 参考[ROS功能启动](快速启动指南#ROS功能启动)，启动Caster的ROS功能
+1. 参考[ROS功能启动](quick_start.md#ROS功能启动)，启动Caster的ROS功能
 
 2. 使用SSH登录Caster-PC，并执行如下指令
 
@@ -78,7 +78,7 @@ Caster可以使用手柄进行遥控，具体按键功能参考[手柄功能定�
    roslaunch caster_viz display.launch type:=gmapping
    ```
 
-4. 参考[手柄控制](快速启动指南#手柄控制)，启动手柄遥控，操控Caster完成地图建立
+4. 参考[手柄功能定义](joystick_description.md)，启动手柄遥控，操控Caster完成地图建立
 
 5. 使用SSH登录Caster-PC，并执行如下指令保存地图
 
@@ -94,7 +94,7 @@ Caster可以使用手柄进行遥控，具体按键功能参考[手柄功能定�
 
 ## 定位导航
 
-1. 参考[ROS功能启动](快速启动指南#ROS功能启动)，启动Caster的ROS功能
+1. 参考[ROS功能启动](quick_start.md#ROS功能启动)，启动Caster的ROS功能
 
 2. 使用SSH登录Caster-PC，并执行如下指令，启动导航功能
 
@@ -113,9 +113,9 @@ Caster可以使用手柄进行遥控，具体按键功能参考[手柄功能定�
 
 ## 自动充电功能
 
-1. 参考[定位导航](快速启动指南#定位导航)，启动Caster的定位导航功能，并正确设置Caster在地图中的位置
+1. 参考[定位导航](quick_start.md#定位导航)，启动Caster的定位导航功能，并正确设置Caster在地图中的位置
 
-2. 参考[自动充电功能原理和配置](自动充电原理与配置#参数配置)，完成对充电桩位置的设定
+2. 参考[自动充电功能原理和配置](auto_charge_description.md#参数配置)，完成对充电桩位置的设定
 
 3. 使用SSH登录Caster-PC，运行如下指令，启动自动充电功能
 
