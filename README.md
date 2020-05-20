@@ -20,7 +20,6 @@ cd ~/catkin_ws/src
 
 # over SSH
 wstool init https://raw.githubusercontent.com/CasterLab/caster_rosinstall/master/caster_robot_ssh.rosinstall
-
 # or over HTTPS
 wstool init https://raw.githubusercontent.com/CasterLab/caster_rosinstall/master/caster_robot_https.rosinstall
 
@@ -39,7 +38,6 @@ cd ~/catkin_ws/src
 
 # over SSH
 wstool init https://raw.githubusercontent.com/CasterLab/caster_rosinstall/master/caster_desktop_ssh.rosinstall
-
 # over HTTPS
 wstool init https://raw.githubusercontent.com/CasterLab/caster_rosinstall/master/caster_desktop_https.rosinstall
 
@@ -55,9 +53,9 @@ Caster ROS package has three parts, See below for details.
  - [caster_app][1]: Application and demo
  - [caster_desktop][2]: visualize, control tools
  - [caster_description][3]: robot description(URDF) for caster
- - [caster_msgs][1]: message, actionlib and service definition
- - [caster_robot][1]: hardware driver etc
- - [caster_simulator][1]: Gazebo simulator
+ - [caster_msgs][4]: message, actionlib and service definition
+ - [caster_robot][5]: hardware driver etc
+ - [caster_simulator][6]: Gazebo simulator
 
 ### caster_app
 
