@@ -92,8 +92,9 @@ ROS package for the Caster simulator
 © 2019 Beijing I-Quotient Robot Technology Co., Ltd. All Rights Reserved
 
 [1]: https://github.com/CasterLab/caster_app
-[2]: https://github.comCasterLab/caster_desktop
+[2]: https://github.com/CasterLab/caster_desktop
 [3]: https://github.com/CasterLab/caster_description
-[4]: https://github.comCasterLab/caster_msgs
+[4]: https://github.com/CasterLab/caster_msgs
 [5]: https://github.com/CasterLab/caster_robot
-[6]: https://github.comCasterLab/caster_simulator
+[6]: https://github.com/CasterLab/caster_simulator
+
