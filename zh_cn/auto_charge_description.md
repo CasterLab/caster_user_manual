@@ -92,12 +92,12 @@
    odom_frame: odom                 # odom frame，用于最后的进站动作
    base_frame: base_footprint       # base_frame，机器人的frame_id
    
-   robot_radius: 0.27               # 机器人的半径
+   robot_radius: 0.275              # 机器人的半径
    
    # 充电桩参数
    dock:
      dock_speed: 0.1                # 进入充电桩的速度
-     dock_distance: 0.6             # DockReady2距离充电桩前端的距离
+     dock_distance: 0.65            # DockReady2距离充电桩前端的距离
      pose_x: 2.03403622872
      pose_y: 0.155554583598
      pose_z: 0.0
@@ -134,7 +134,7 @@
 
 ### Action Subscribed Topics
 
-`dock_action/goal` (caster_app/DockActionGoal)
+`dock_action/goal` (caster_msgs/DockActionGoal)
 
 - 通过写入`DockActionGoal.dock`控制自动充电行为，true 为充电， false为推出
 
@@ -144,7 +144,7 @@
 
 ### Action Published Topics
 
-`dock_action/feedback` (caster_app/DockActionFeedback)
+`dock_action/feedback` (caster_msgs/DockActionFeedback)
 
 - 返回当前行为的执行状态
 
@@ -152,7 +152,7 @@
 
 - 返回当前Action任务的状态
 
-`dock_action/result` (caster_app/DockActionResult)
+`dock_action/result` (caster_msgs/DockActionResult)
 
 - 在行为结束时，通过此topic返回行为执行结果
 
