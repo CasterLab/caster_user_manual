@@ -1,0 +1,1 @@
+<p align="center"><img src="image/joystick_info.png" width="60%" /></p>
