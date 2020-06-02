@@ -24,15 +24,22 @@ The following command will install caster_robot, caster_description and depends
 cd ~/catkin_ws/src
 
 # over SSH
-wstool init https://raw.githubusercontent.com/CasterLab/caster_rosinstall/master/caster_robot_ssh.rosinstall
+wstool init https://raw.githubusercontent.com/CasterLab/caster_rosinstall/master/ssh/caster_robot.rosinstall
 # or over HTTPS
-wstool init https://raw.githubusercontent.com/CasterLab/caster_rosinstall/master/caster_robot_https.rosinstall
+wstool init https://raw.githubusercontent.com/CasterLab/caster_rosinstall/master/caster_robot.rosinstall
+# update workspace
+wstool update -t src
 
-wstool update
+# build
 rosdep install --from-paths . --ignore-src -r -y
-sudo cp caster_robot/caster_base/config/57-caster-robot.rules /etc/udev/rules.d/
 cd ~/catkin_ws
 catkin_make
+
+# install rules for caster
+sudo cp caster_robot/caster_base/config/57-caster-robot.rules /etc/udev/rules.d/
+sudo service udev reload
+sudo service udev restart
+sudo udevadm trigger
 ```
 
 ### Caster desktop package
@@ -42,11 +49,13 @@ The following command will install caster_desktop, caster_description and depend
 cd ~/catkin_ws/src
 
 # over SSH
-wstool init https://raw.githubusercontent.com/CasterLab/caster_rosinstall/master/caster_desktop_ssh.rosinstall
+wstool init https://raw.githubusercontent.com/CasterLab/caster_rosinstall/master/ssh/caster_desktop.rosinstall
 # over HTTPS
-wstool init https://raw.githubusercontent.com/CasterLab/caster_rosinstall/master/caster_desktop_https.rosinstall
-
+wstool init https://raw.githubusercontent.com/CasterLab/caster_rosinstall/master/caster_desktop.rosinstall
+# update workspace
 wstool update -t src
+
+# build
 rosdep install --from-paths . --ignore-src -r -y
 cd ~/catkin_ws
 catkin_make
@@ -94,7 +103,7 @@ ROS packages for the Caster robot, for operating Caster robot hardware.
 ROS package for the Caster simulator
 
 ------
-© 2019 Beijing I-Quotient Robot Technology Co., Ltd. All Rights Reserved
+© 2020 Beijing I-Quotient Robot Technology Co., Ltd. All Rights Reserved
 
 [1]: https://github.com/CasterLab/caster_app
 [2]: https://github.com/CasterLab/caster_desktop

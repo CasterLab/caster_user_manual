@@ -29,19 +29,13 @@
 2. 运行如下代码，启动底盘控制程序
 
    ```bash
-   roslaunch caster_base caster.launch
+   roslaunch caster_moma_bringup bringup.launch
    ```
 
-3. 底盘启动后，可以在外部PC中，运行如下指令，启动ROS诊断信息监控程序
+3. 也可以在外部PC中，使用Rviz来查看Caster传感器的信息
 
    ```bash
-   rosrun rqt_runtime_monitor rqt_runtime_monitor
-   ```
-
-4. 也可以在外部PC中，使用Rviz来查看Caster传感器的信息
-
-   ```bash
-   roslaunch caster_viz display.launch type:=view
+   roslaunch caster_moma_viz display.launch
    ```
 
 ## 手柄控制
@@ -50,17 +44,9 @@ Caster可以使用手柄进行遥控，具体按键功能参考[手柄功能定�
 
 1. 参考[ROS功能启动](quick_start.md#ROS功能启动)，启动Caster的ROS功能
 
-2. 将手柄连接至外部PC
+2. 根据[手柄功能定义](joystick_description.md)，操控Caster进行移动
 
-3. 在外部PC中，运行如下指令，启动Caster的遥控程序
-
-   ```bash
-   roslaunch caster_teleop teleop.launch
-   ```
-
-4. 根据[手柄功能定义](joystick_description.md)，操控Caster进行移动
-
-5. 对于移动操作，只有在按下`安全键`的时候，信号才会被Caster接收到。
+3. 对于移动操作，只有在按下`安全键`的时候，信号才会被Caster接收到。
 
 ## 创建地图
 
@@ -75,19 +61,16 @@ Caster可以使用手柄进行遥控，具体按键功能参考[手柄功能定�
 3. 在外部PC中，运行如下指令，启动建图界面
 
    ```bash
-   roslaunch caster_viz display.launch type:=gmapping
+   roslaunch caster_moma_viz display.launch type:=gmapping
    ```
 
-4. 参考[手柄功能定义](joystick_description.md)，启动手柄遥控，操控Caster完成地图建立
+4. 参考[手柄控制](quick_start.md#手柄控制)，启动手柄遥控，操控Caster完成地图建立
 
 5. 使用SSH登录Caster-PC，并执行如下指令保存地图
 
    ```bash
-   # 进入caster_navigation的map文件夹，扫描后的地图推荐存放至此文件夹
-   roscd caster_navigation/map
-   
-   # 使用map_saver保存地图
-   rosrun map_server map_saver -f [地图名称]
+   # 使用map_saver保存地图, 扫描后的地图推荐存放至caster_navigation的map
+   rosrun map_server map_saver -f $(rospack find caster_navigation)/map/[地图名称]
    ```
 
 **注意：在建立地图时，请勿将充电桩放置于地面上，地图建立完成后再放置充电桩**
@@ -120,7 +103,7 @@ Caster可以使用手柄进行遥控，具体按键功能参考[手柄功能定�
 3. 使用SSH登录Caster-PC，运行如下指令，启动自动充电功能
 
    ```bash
-   roslaunch caster_app caster_app.launch
+   roslaunch caster_auto_charge auto_charge.launch
    ```
 
 4. 按下手柄的`START`按键，Caster开始执行自动充电程序
