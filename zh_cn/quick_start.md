@@ -1,6 +1,6 @@
 ## 前期准备
 
-1. 一台装有ROS Kinetic的Ubuntu电脑一台，下文简称**外部PC**
+1. 一台装有ROS Melodic的Ubuntu电脑一台，下文简称**外部PC**
 
 2. 将网线连接到底盘的交换机上，并参考[网络信息-外部设备设置](network_info.md#外部设备设置)，设置外部PC的IP地址
 
