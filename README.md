@@ -26,9 +26,9 @@ cd ~/catkin_ws/src
 wstool init
 
 # over SSH
-wstool init https://raw.githubusercontent.com/CasterLab/caster_rosinstall/master/ssh/caster_robot.rosinstall
+wstool merge https://raw.githubusercontent.com/CasterLab/caster_rosinstall/master/ssh/caster_robot.rosinstall
 # or over HTTPS
-wstool init https://raw.githubusercontent.com/CasterLab/caster_rosinstall/master/caster_robot.rosinstall
+wstool merge https://raw.githubusercontent.com/CasterLab/caster_rosinstall/master/caster_robot.rosinstall
 # update workspace
 wstool update -t src
 
