@@ -23,6 +23,8 @@ The following command will install caster_robot, caster_description and depends
 ```bash
 cd ~/catkin_ws/src
 
+wstool init
+
 # over SSH
 wstool init https://raw.githubusercontent.com/CasterLab/caster_rosinstall/master/ssh/caster_robot.rosinstall
 # or over HTTPS
@@ -48,10 +50,12 @@ The following command will install caster_desktop, caster_description and depend
 ```bash
 cd ~/catkin_ws/src
 
+wstool init
+
 # over SSH
-wstool init https://raw.githubusercontent.com/CasterLab/caster_rosinstall/master/ssh/caster_desktop.rosinstall
+wstool merge https://raw.githubusercontent.com/CasterLab/caster_rosinstall/master/ssh/caster_desktop.rosinstall
 # over HTTPS
-wstool init https://raw.githubusercontent.com/CasterLab/caster_rosinstall/master/caster_desktop.rosinstall
+wstool merge https://raw.githubusercontent.com/CasterLab/caster_rosinstall/master/caster_desktop.rosinstall
 # update workspace
 wstool update -t src
 
