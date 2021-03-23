@@ -29,13 +29,13 @@
 2. 运行如下代码，启动底盘控制程序
 
    ```bash
-   roslaunch caster_moma_bringup bringup.launch
+   roslaunch caster_bringup bringup_all.launch
    ```
 
 3. 也可以在外部PC中，使用Rviz来查看Caster传感器的信息
 
    ```bash
-   roslaunch caster_moma_viz display.launch
+   roslaunch caster_viz display.launch
    ```
 
 ## 手柄控制
@@ -61,7 +61,7 @@ Caster可以使用手柄进行遥控，具体按键功能参考[手柄功能定�
 3. 在外部PC中，运行如下指令，启动建图界面
 
    ```bash
-   roslaunch caster_moma_viz display.launch type:=gmapping
+   roslaunch caster_viz display.launch type:=gmapping
    ```
 
 4. 参考[手柄控制](quick_start.md#手柄控制)，启动手柄遥控，操控Caster完成地图建立
