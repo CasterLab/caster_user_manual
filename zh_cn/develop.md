@@ -4,9 +4,9 @@
 
 ## 传感器信息
 
-`hongfu_bms_status_node/hongfu_bms` (hongfu_bms_msg/HongfuStatus)
+`caster_mcu_node/state` (caster_msgs/CasterState)
 
-电池BMS信息，包含电池状态，剩余电量，以及电池的充放电信息
+机器人状态信息，包含电池BMS信息，MCU信息，以及5v，12v，19v电源口的电压电流信息
 
 `imu_data` (sensor_msgs/Imu)
 
@@ -43,18 +43,6 @@ IMU的信息，包含Caster的三轴加速度/角加速度，以及姿态信息
 `dauxi_ks106_node/ultrasonic_rear_right` (sensor_msgs/Range)
 
 超声波数据（右后）
-
-## 设备通信
-
-**注意：切勿直接通过Topic发送CAN数据，以免设备做出不可预测的动作！！**
-
-`sent_messages` (can_msgs/Frame)
-
-需要发送CAN总线上的数据
-
-`received_messages` (can_msgs/Frame)
-
-CAN总线上接收到的数据
 
 ##  运动控制
 
